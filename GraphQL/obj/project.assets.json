@@ -58,6 +58,19 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "HotChocolate.Data/12.0.0": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Execution": "12.0.0",
+          "HotChocolate.Types.CursorPagination": "12.0.0"
+        },
+        "compile": {
+          "lib/net5.0/HotChocolate.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/HotChocolate.Data.dll": {}
+        }
+      },
       "HotChocolate.Execution/12.0.0": {
         "type": "package",
         "dependencies": {
@@ -916,6 +929,20 @@
         "hotchocolate.aspnetcore.nuspec",
         "lib/net5.0/HotChocolate.AspNetCore.dll",
         "lib/netcoreapp3.1/HotChocolate.AspNetCore.dll"
+      ]
+    },
+    "HotChocolate.Data/12.0.0": {
+      "sha512": "4vx6OPvvTPu0RXrNgpukOEETysN/bY3IWIXyCmUq2cnkWXaAOvqRJ7OK1PMEZCQ5QD4E1+/p/QsXJlomLK20oA==",
+      "type": "package",
+      "path": "hotchocolate.data/12.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "hotchocolate.data.12.0.0.nupkg.sha512",
+        "hotchocolate.data.nuspec",
+        "lib/net5.0/HotChocolate.Data.dll",
+        "lib/netcoreapp3.1/HotChocolate.Data.dll",
+        "lib/netstandard2.0/HotChocolate.Data.dll"
       ]
     },
     "HotChocolate.Execution/12.0.0": {
@@ -2148,6 +2175,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "HotChocolate.AspNetCore >= 12.0.0",
+      "HotChocolate.Data >= 12.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 6.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
@@ -2159,11 +2187,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mike/Desktop/hotchocolate/GraphQL/GraphQL.csproj",
+      "projectUniqueName": "/home/mike/Desktop/hotchocolate_workshop/GraphQL/GraphQL.csproj",
       "projectName": "GraphQL",
-      "projectPath": "/home/mike/Desktop/hotchocolate/GraphQL/GraphQL.csproj",
+      "projectPath": "/home/mike/Desktop/hotchocolate_workshop/GraphQL/GraphQL.csproj",
       "packagesPath": "/home/mike/.nuget/packages/",
-      "outputPath": "/home/mike/Desktop/hotchocolate/GraphQL/obj/",
+      "outputPath": "/home/mike/Desktop/hotchocolate_workshop/GraphQL/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/mike/.nuget/NuGet/NuGet.Config"
@@ -2191,6 +2219,10 @@
         "targetAlias": "net6.0",
         "dependencies": {
           "HotChocolate.AspNetCore": {
+            "target": "Package",
+            "version": "[12.0.0, )"
+          },
+          "HotChocolate.Data": {
             "target": "Package",
             "version": "[12.0.0, )"
           },
